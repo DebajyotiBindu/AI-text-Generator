@@ -22,7 +22,7 @@ tokenizer.adapt(word_list)
 tokens=tokenizer(word_list)
 tokens=tf.reshape(tokens,[-1])
 
-SEQ_LENGTH=10
+SEQ_LENGTH=20
 BATCH_SIZE=64
 def create_dataset(tokens,seq_length,batch_size):
     ds=tf.data.Dataset.from_tensor_slices(tokens)
