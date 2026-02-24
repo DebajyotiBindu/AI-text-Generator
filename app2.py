@@ -15,6 +15,7 @@ def load_sherlock():
         return None
     return pipeline("text-generation", model=MODEL_PATH)
 
+with st.spinner("loading model..."):
     sherlock_pipe = load_sherlock()
 
 prompt = st.text_input("Start a sentence:", "The mystery of the")
@@ -25,10 +26,9 @@ with col1:
 with col2:
     temp = st.slider("Creativity (Temperature)", 0.1, 1.0, 0.7)
 
-if st.button("Generate Logic"):
+if st.button("Generate Response"):
     if sherlock_pipe:
         with st.spinner("Loading"):
-            # Generate!
             result = sherlock_pipe(
                 prompt, 
                 max_length=max_len, 
