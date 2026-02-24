@@ -4,7 +4,7 @@ import os
 
 st.set_page_config(page_title="AI Text Generator", )
 
-st.title("AIText Generator")
+st.title("AI Text Generator")
 
 MODEL_PATH = r"D:\mlproject7\model_gpt2"
 
@@ -17,7 +17,7 @@ def load_sherlock():
 
     sherlock_pipe = load_sherlock()
 
-prompt = st.text_input("Start a sentence for Sherlock:", "The mystery of the")
+prompt = st.text_input("Start a sentence:", "The mystery of the")
 
 col1, col2 = st.columns(2)
 with col1:
