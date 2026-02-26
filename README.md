@@ -1,1 +1,1 @@
-## AI Text Gnerator
+## AI Text Generator
